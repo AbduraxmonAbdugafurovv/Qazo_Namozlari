@@ -45,11 +45,15 @@ class _LangPageState extends State<LangPage> {
             InkWell(
               child: langselect(
                   context, "English language", "assets/icons/uk.png"),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamedAndRemoveUntil(context, "onboarding", (route) => false);
+              },
             ),
             InkWell(
               child: langselect(context, "Русский язык", "assets/icons/ru.png"),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamedAndRemoveUntil(context, "onboarding", (route) => false);
+              },
             )
           ],
         ),

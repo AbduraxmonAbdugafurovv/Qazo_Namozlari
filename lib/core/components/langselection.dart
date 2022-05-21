@@ -21,10 +21,11 @@ SizedBox langselect(BuildContext context, String text, String image) {
             SizedBox(
               width: context.width * 0.03,
             ),
-            Text(text,
-                style: TextStyle(
-                    fontSize: FontConst.mediumFont,
-                    fontWeight: FontWeight.w600),),
+            Text(
+              text,
+              style: TextStyle(
+                  fontSize: FontConst.mediumFont, fontWeight: FontWeight.w600),
+            ),
           ],
         ),
         Divider(
