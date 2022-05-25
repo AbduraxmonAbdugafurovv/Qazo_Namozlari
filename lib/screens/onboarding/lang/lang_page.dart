@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:qazonamozlari/core/components/langselection.dart';
@@ -28,7 +29,7 @@ class _LangPageState extends State<LangPage> {
             ),
             SizedBox(height: context.height * 0.1),
             Text(
-              "Tilni tanlang/Bыберите  язык",
+              "Tilni tanlang/Bыбepитe  язык",
               style: TextStyle(
                   fontSize: FontConst.largeFont, fontWeight: FontWeight.w600),
             ),
@@ -39,20 +40,26 @@ class _LangPageState extends State<LangPage> {
               child:
                   langselect(context, "O'zbek tili", "assets/icons/flaguz.png"),
               onTap: () {
-                Navigator.pushNamedAndRemoveUntil(context, "onboarding", (route) => false);
+                context.setLocale(const Locale("uz", "UZ"));
+                Navigator.pushNamedAndRemoveUntil(
+                    context, "onboarding", (route) => false);
               },
             ),
             InkWell(
               child: langselect(
                   context, "English language", "assets/icons/uk.png"),
               onTap: () {
-                Navigator.pushNamedAndRemoveUntil(context, "onboarding", (route) => false);
+                context.setLocale(const Locale("en", "US"));
+                Navigator.pushNamedAndRemoveUntil(
+                    context, "onboarding", (route) => false);
               },
             ),
             InkWell(
-              child: langselect(context, "Русский язык", "assets/icons/ru.png"),
+              child: langselect(context, "Pyccкий язык", "assets/icons/ru.png"),
               onTap: () {
-                Navigator.pushNamedAndRemoveUntil(context, "onboarding", (route) => false);
+                context.setLocale(const Locale("ru", "RU"));
+                Navigator.pushNamedAndRemoveUntil(
+                    context, "onboarding", (route) => false);
               },
             )
           ],

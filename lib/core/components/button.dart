@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:qazonamozlari/core/constant/constant.dart';
 import 'package:qazonamozlari/core/extension/contex_ex.dart';
 
- mainButton(BuildContext context, text) {
+ mainButton(BuildContext context, text ,color) {
   return Container(
     height: context.height * 0.065,
     width: context.width,
     decoration: BoxDecoration(
-        color: ColorConst.green, borderRadius: BorderRadius.circular(7)),
+        color: color, borderRadius: BorderRadius.circular(7)),
     alignment: Alignment.center,
     child: Text(
       text,

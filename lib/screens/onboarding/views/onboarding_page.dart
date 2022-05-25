@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:qazonamozlari/core/components/button.dart';
 import 'package:qazonamozlari/core/components/onboardingafterimg.dart';
+import 'package:qazonamozlari/core/constant/constant.dart';
 import 'package:qazonamozlari/core/constant/onboarding_constant.dart';
 import 'package:qazonamozlari/core/extension/contex_ex.dart';
 import 'package:qazonamozlari/screens/onboarding/authcubit/cubit.dart';
@@ -30,10 +32,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
                 IconConst.icons[0], PageTwo());
           } else if (state is PageTwo) {
             return page(context, ImageConstant.imgs[1], "Asosiy emas", "asosiy",
-                IconConst.icons[0], PageThree());
+                IconConst.icons[1], PageThree());
           } else {
             return page(context, ImageConstant.imgs[2], "Asosiy emas", "asosiy",
-                IconConst.icons[0], "");
+                IconConst.icons[2], "");
           }
         },
       ),
@@ -56,7 +58,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 30),
           child: InkWell(
-            child: mainButton(context, "Ro'yhatdan o'tish"),
+            child: mainButton(context, "royhatdanoting".tr(), ColorConst.green),
             onTap: () {
               checkState(state);
             },
@@ -67,10 +69,10 @@ class _OnboardingPageState extends State<OnboardingPage> {
   }
 
   checkState(state) {
-  try {
-    context.read<OnboardingCubit>().changeState(state);
-  } catch (e) {
-    Navigator.pushNamedAndRemoveUntil(context, "sign_up", (route) => false);
-  }
+    try {
+      context.read<OnboardingCubit>().changeState(state);
+    } catch (e) {
+      Navigator.pushNamedAndRemoveUntil(context, "sign_in", (route) => false);
+    }
   }
 }

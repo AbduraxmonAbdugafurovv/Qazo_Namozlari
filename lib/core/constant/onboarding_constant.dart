@@ -1,8 +1,8 @@
 class ImageConstant {
   static List imgs = [
-    "/Users/abdurahmonabdugafurov/Desktop/Developing/flutter/qazonamozlari/assets/images/first.png",
-    "/Users/abdurahmonabdugafurov/Desktop/Developing/flutter/qazonamozlari/assets/images/second.png",
-    "/Users/abdurahmonabdugafurov/Desktop/Developing/flutter/qazonamozlari/assets/images/third.png",
+    "/Users/abdurahmonabdugafurov/Desktop/Developing/flutter/Qazonamozlariapp/qazonamozlari/assets/images/first.png",
+    "/Users/abdurahmonabdugafurov/Desktop/Developing/flutter/Qazonamozlariapp/qazonamozlari/assets/images/second.png",
+    "/Users/abdurahmonabdugafurov/Desktop/Developing/flutter/Qazonamozlariapp/qazonamozlari/assets/images/third.png",
   ];
 }
 class IconConst {
